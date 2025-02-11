@@ -60,7 +60,7 @@ D:.
 
 4. Create a `.env` file in the root directory and add the following:
    ```sh
-   SSH_KEY_PASSPHRASE="your-here"
+   SSH_KEY_PASSPHRASE=""
    ```
 
 ## Usage
