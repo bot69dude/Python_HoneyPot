@@ -1,0 +1,7 @@
+Login attempt - User: someuser, Password: your_here, IP: 127.0.0.1
+2025-02-11 15:48:53,946 - creds_audit - INFO - Login attempt - User: someuser, Password: your_here, IP: 127.0.0.1
+2025-02-11 15:55:26,291 - creds_audit - INFO - Login attempt - User: someuser, Password: your_here, IP: 127.0.0.1
+2025-02-11 16:51:31,158 - creds_audit - INFO - Login attempt - User: someuser, Password: you cunt, IP: 127.0.0.1
+2025-02-11 16:56:03,201 - creds_audit - INFO - Login attempt - User: someuser, Password: LGBTQ, IP: 127.0.0.1
+2025-02-11 16:57:26,710 - creds_audit - INFO - Login attempt - User: someuser, Password: fuckubitch, IP: 127.0.0.1
+2025-02-11 17:00:20,809 - creds_audit - INFO - Login attempt - User: someuser, Password: fuck of, IP: 127.0.0.1

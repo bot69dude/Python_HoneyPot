@@ -1,0 +1,31 @@
+2025-02-11 15:48:59,943 - funnel - INFO - Command executed: b'ls' from 127.0.0.1
+2025-02-11 15:49:13,934 - funnel - INFO - Command executed: b'cat jumpbox1.conf' from 127.0.0.1
+2025-02-11 15:49:21,569 - funnel - INFO - Command executed: b'fuck u' from 127.0.0.1
+2025-02-11 15:49:49,296 - funnel - INFO - Command executed: b'pwd' from 127.0.0.1
+2025-02-11 15:50:00,060 - funnel - INFO - Command executed: b'whom\x7fami' from 127.0.0.1
+2025-02-11 15:50:11,065 - funnel - INFO - Command executed: b'\x7fwhoami' from 127.0.0.1
+2025-02-11 15:50:41,296 - funnel - INFO - Command executed: b'exit' from 127.0.0.1
+2025-02-11 15:55:45,433 - funnel - INFO - Command executed: ls / from 127.0.0.1
+2025-02-11 15:55:45,436 - funnel - INFO - Command executed: cd .. from 127.0.0.1
+2025-02-11 15:55:45,439 - funnel - INFO - Command executed: cat access.log from 127.0.0.1
+2025-02-11 15:55:45,440 - funnel - INFO - Command executed: ps from 127.0.0.1
+2025-02-11 15:55:45,440 - funnel - INFO - Command executed: uname -a from 127.0.0.1
+2025-02-11 15:55:45,440 - funnel - INFO - Command executed: w from 127.0.0.1
+2025-02-11 15:55:45,441 - funnel - INFO - Command executed: free -h from 127.0.0.1
+2025-02-11 15:55:56,070 - funnel - INFO - Command executed: df -h from 127.0.0.1
+2025-02-11 15:56:22,142 - funnel - INFO - Command executed: clear from 127.0.0.1
+2025-02-11 15:56:26,032 - funnel - INFO - Command executed: clear from 127.0.0.1
+2025-02-11 15:56:30,762 - funnel - INFO - Command executed: exit from 127.0.0.1
+2025-02-11 16:51:53,569 - funnel - INFO - Command executed: hello bitch from 127.0.0.1
+2025-02-11 16:53:45,123 - funnel - INFO - Command executed: exit from 127.0.0.1
+2025-02-11 16:56:11,858 - funnel - INFO - Command executed: ls from 127.0.0.1
+2025-02-11 16:56:26,863 - funnel - INFO - Command executed: whawhat fuck is this from 127.0.0.1
+2025-02-11 16:56:34,256 - funnel - INFO - Command executed: hey from 127.0.0.1
+2025-02-11 16:56:38,325 - funnel - INFO - Command executed: clear from 127.0.0.1
+2025-02-11 16:57:00,727 - funnel - INFO - Command executed: clear from 127.0.0.1
+2025-02-11 16:57:03,382 - funnel - INFO - Command executed: exit from 127.0.0.1
+2025-02-11 16:57:30,498 - funnel - INFO - Command executed: ls from 127.0.0.1
+2025-02-11 17:00:25,566 - funnel - INFO - Command executed: ls from 127.0.0.1
+2025-02-11 17:00:32,746 - funnel - INFO - Command executed: ok from 127.0.0.1
+2025-02-11 17:00:41,102 - funnel - INFO - Command executed: pwd from 127.0.0.1
+2025-02-11 17:00:55,735 - funnel - INFO - Command executed: it is actually working from 127.0.0.1
