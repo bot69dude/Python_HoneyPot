@@ -1,93 +1,90 @@
-# SSH & HTTP Honeypot
+# SSH & Web Honeypot
 
-## Overview
-This project is a **honeypot** that mimics an SSH and HTTP server to log and analyze unauthorized access attempts. It provides:
-
-- A **fake SSH server** using Paramiko to capture login attempts and commands executed by attackers.
-- A **web honeypot** simulating a vulnerable WordPress login page.
-- A **dashboard** for real-time monitoring of attack data.
-
----
+This project is a honeypot that mimics an SSH and WordPress login system to capture attacker activity.
 
 ## Features
-- **SSH Honeypot**
-  - Logs usernames, passwords, and commands used by attackers.
-  - Fake interactive shell with realistic responses.
-  - Supports tarpit mode to slow down brute-force attacks.
-- **HTTP Honeypot**
-  - Simulates a fake WordPress login page.
-  - Captures credentials entered by attackers.
-- **Logging & Monitoring**
-  - Stores login attempts and commands in log files.
-  - Web-based dashboard for real-time analysis.
-- **Scalability**
-  - Uses multithreading and thread pooling for handling large numbers of connections.
-  
----
+- Fake SSH server that logs login attempts and commands executed by attackers.
+- Fake WordPress login page that logs username and password attempts.
+- Logs all activity to rotating log files.
+- Rate-limiting to prevent excessive connection attempts.
+- Simulates a realistic Linux system for attackers to interact with.
+
+## Project Structure
+```
+D:.
+│   .env                  # Stores environment variables
+│   .gitignore            # Specifies ignored files for version control
+│   honeypy.py            # Main script to run the honeypot
+│   README.MD             # Documentation for the project
+│   requirements.txt      # Lists dependencies
+│   ssh_honeypot.py       # SSH honeypot implementation
+│   web_honeypot.py       # Web honeypot (WordPress login page)
+│
+├───logs
+│       cmd_audit.log     # Logs SSH commands executed by attackers
+│       creds_audit.log   # Logs SSH login attempts
+│       funnel.log        # Logs general honeypot activity
+│
+├───ssh_honeypy
+│   └───static
+│           server.key       # SSH private key
+│           server.key.pub   # SSH public key
+│
+├───templates
+│       dashboard.html    # Web dashboard UI (if implemented)
+│       index.html        # Main page for the honeypot
+│       wp-admin.html     # Fake WordPress login page
+│
+└───__pycache__           # Compiled Python files
+```
 
 ## Installation
-### **1. Clone the Repository**
-```bash
-git clone https://github.com/yourusername/honeypot-project.git
-cd honeypot-project
-```
 
-### **2. Install Dependencies**
-Ensure Python 3.8+ is installed, then run:
-```bash
-pip install -r requirements.txt
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/bot69dude/Python_HoneyPot.git
+   cd Honey_pot
+   ```
 
-### **3. Generate SSH Key (If Needed)**
-```bash
-ssh-keygen -t rsa -b 2048 -f ssh_honeypy/static/server.key -N ""
-```
+2. Create and activate a virtual environment:
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # On Linux/macOS
+   venv\Scripts\activate     # On Windows
+   ```
 
----
+3. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+4. Create a `.env` file in the root directory and add the following:
+   ```sh
+   SSH_KEY_PASSPHRASE="your-here"
+   ```
 
 ## Usage
-### **Running the SSH Honeypot**
-```bash
+
+### Running the SSH Honeypot
+```sh
 python honeypy.py -a 0.0.0.0 -p 2222 -s
 ```
-- The SSH honeypot will listen on **port 2222**.
+This starts the SSH honeypot on port 2222.
 
-### **Running the HTTP Honeypot**
-```bash
+### Running the Web Honeypot
+```sh
 python honeypy.py -a 0.0.0.0 -p 8080 -wh
 ```
-- The HTTP honeypot will start on **port 8080**.
+This starts the web honeypot on port 8080.
 
-### **Accessing the Dashboard**
-```bash
-python web_app.py
-```
-- Open your browser and go to `http://localhost:5000`.
+## Logs
+- All logs are stored in the `logs/` directory.
+- SSH login attempts are recorded in `creds_audit.log`.
+- Commands executed in the SSH honeypot are stored in `cmd_audit.log`.
+- General honeypot activity is logged in `funnel.log`.
 
----
-
-## Testing
-To test the SSH honeypot, open a new terminal and run:
-```bash
-ssh -p 2222 someuser@localhost
-```
-For the HTTP honeypot, visit:
-```bash
-http://localhost:8080
-```
-
----
-
-## Logs & Data
-- **SSH Credentials & Commands**: Stored in `logs/creds_audit.log` & `logs/cmd_audit.log`
-- **Web Login Attempts**: Stored in `logs/web_honeypot.log`
-
----
-
-## Contributing
-Feel free to submit pull requests or report issues on GitHub.
-
----
+## Security Notice
+This project is for research and educational purposes only. Running a honeypot may expose your system to potential risks. Ensure it is run in an isolated environment.
 
 ## License
-MIT License. See `LICENSE` file for details.
+MIT License
